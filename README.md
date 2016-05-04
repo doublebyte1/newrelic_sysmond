@@ -39,7 +39,7 @@ For using this image you will need version >= 1.10 of the docker engine. If you 
 If this is your case, you will be better off using NewRelic's official version:
 
 ~~~bash
- docker pull newrelic/nrsysmond_
+ docker pull newrelic/nrsysmond
 ~~~
 
 If you have a version of docker that is >= 1.10, you may follow the installation steps.
@@ -56,7 +56,7 @@ You can do so, by following this url:
 You can build this image, by typing from the root of this project:
 
 ~~~bash
-_docker build -t newrelic_sysmond .
+ docker build -t newrelic_sysmond .
 ~~~
 
 **STEP 3**
