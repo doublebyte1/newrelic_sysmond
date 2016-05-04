@@ -22,7 +22,7 @@ There is a known issue with the latest versions of docker, for which NewRelic ha
 
  https://t.co/HAlvkB9bHa
 
-Although there are tons of containers on docker hub with nrsysmond, I did not find any which would work with docker >= 1.10, and this is the reason why I created this image.
+Although there are tons of containers on docker hub with nrsysmond, I did not find any solution which would work with docker >= 1.10, and this is the reason why I created this image.
 
 AUTHORS
 =======
@@ -36,11 +36,11 @@ REQUIREMENTS & INSTALLATION IN 3 QUICK STEPS
 **Warning**
 
 For using this image you will need version >= 1.10 of the docker engine. If you have an **earlier version**, the location of the docker metrics will be different and the docker monitoring **will not work**.
-If that is the case, you will be better off using their official version:
+If this is your case, you will be better off using NewRelic's official version:
 
  _docker pull newrelic/nrsysmond_
 
-If you have a version of docker that is >= 1.10, please follow the installation steps.
+If you have a version of docker that is >= 1.10, you may follow the installation steps.
 
 **STEP 1**
 
@@ -57,9 +57,12 @@ You can build this image, by typing from the root of this project:
 
 **STEP 3**
 
+The next and final step is to run a container, with this image.
+
 The container will need privileged access to the docker daemon, and it will need to bind to some host directories, in order to track what is happening (I guess this is expected from a monitor). 
 Therefore you can run the container, with:
 
+~~~bash
  docker run -d \
  --privileged=true --name nrsysmond \
  --pid=host \
@@ -70,6 +73,7 @@ Therefore you can run the container, with:
  -v /var/run/docker.sock:/var/run/docker.sock \
  -v /var/log:/var/log:rw \
  newrelic_sysmond
+~~~
 
 The string REPLACE_BY_NEWRELIC_KEY should be replaced by your newrelic key.
 
