@@ -2,8 +2,6 @@ FROM ubuntu
 
 MAINTAINER doublebyte <joana.simoes@geocat.net>
 
-#ENV NRSYSMOND_license_key 
-
 #Install new relic server to monitor the container
 RUN apt-get update -q && apt-get install -yq ca-certificates wget procps && \
     echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list && \
