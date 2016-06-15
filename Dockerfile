@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:trusty
 
 MAINTAINER doublebyte <joana.simoes@geocat.net>
 
