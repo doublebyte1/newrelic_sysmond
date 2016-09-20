@@ -83,3 +83,5 @@ The string _REPLACE_BY_NEWRELIC_KEY_ should be replaced by your newrelic key.
 
 After this you can start enjoying your server and docker metrics, in the NewRelic control panel. Just wait a few minutes and go to the server's tab. A server with your hostname, will become visible.
 
+[![](https://images.microbadger.com/badges/image/doublebyte/newrelic_sysmond.svg)](https://microbadger.com/images/doublebyte/newrelic_sysmond "Get your own image badge on microbadger.com")
+
